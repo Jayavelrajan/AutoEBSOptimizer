@@ -1,4 +1,4 @@
-# AAutoEBSOptimizer: Real-time Compliance for AWS Volumes
+# AutoEBSOptimizer: Real-time Compliance for AWS Volumes
 
 ## Overview
 
