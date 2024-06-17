@@ -28,9 +28,13 @@ This project automates the conversion of newly created Amazon Elastic Block Stor
 1. **Create Lambda Function:**
    - Use AWS Management Console, AWS CLI, or AWS SDKs to create a Lambda function.
    - Ensure the function has an IAM role with `ec2:ModifyVolume` permission.
+  
+     ![IAM role](Assets/iam-role.png)
 
 2. **Set Up CloudWatch Event Rule:**
    - Create a CloudWatch Event Rule to trigger the Lambda function on EBS volume creation events (`CreateVolume` API calls).
+  
+     ![CloudWatch Event Rule](Assets/cloudwatch-rule.png)
 
 3. **Lambda Function Code:**
    - Use the provided Lambda function code (`lambda_function.py`) in your Lambda function.
@@ -39,30 +43,17 @@ This project automates the conversion of newly created Amazon Elastic Block Stor
      
      ![Lambda Function](Assets/lamda-func.png)
 
-4. **Testing:**
+4. **Configure CloudWatch Logs:**
+   - Ensure that the Lambda function is configured to send logs to CloudWatch Logs.
+   - Monitor the logs for debugging and tracking the function's execution and any errors that may occur.
+  
+     ![CloudWatch Logs](Assets/cloudwatch-logs.png)
+
+5. **Testing:**
    - Test the setup by creating new EBS volumes in your AWS environment and verifying if they are automatically converted from `gp2` to `gp3`.
+   - Ensure that volumes of type `gp3` are not modified.
 
 ## Usage
 
 Once deployed, the system will automatically convert any newly created EBS volumes from `gp2` to `gp3` type. Monitor CloudWatch Logs for Lambda function executions and API responses for auditing and troubleshooting.
 
-## Contributing
-
-Contributions are welcome! For major changes, please open an issue first to discuss what you would like to change.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgements
-
-- AWS Documentation and Community for resources and support.
-- Inspiration: [Provide sources of inspiration or related work if applicable]
-
----
-
-### Additional Notes:
-
-- **Architecture Diagram:** Replace `architecture-diagram.png` with your actual architecture diagram illustrating the flow and components of your project.
-- **License:** Include a `LICENSE` file with the appropriate license text (e.g., MIT, Apache).
-- **Acknowledgements:** Add any acknowledgements or references as needed.
