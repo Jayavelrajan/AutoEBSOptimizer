@@ -14,7 +14,7 @@ This project automates the conversion of newly created Amazon Elastic Block Stor
 - **CloudWatch Event Rule:** Monitors for EBS volume creation events (`CreateVolume` API calls) and triggers the Lambda function.
 - **Lambda Function:** Receives the event, extracts the volume ID from the ARN, and modifies the volume type using the AWS SDK (`boto3`).
 - **IAM Role:** Assigned to the Lambda function with permissions (`ec2:ModifyVolume`) to modify EBS volumes.
-- **Logging (Optional):** CloudWatch Logs for monitoring Lambda function execution and API responses.
+- **Logging:** CloudWatch Logs for monitoring Lambda function execution and API responses.
 
 ## Setup
 
