@@ -35,6 +35,9 @@ This project automates the conversion of newly created Amazon Elastic Block Stor
 3. **Lambda Function Code:**
    - Use the provided Lambda function code (`lambda_function.py`) in your Lambda function.
    - Customize as per your environment (e.g., error handling, logging).
+  
+     
+     ![Lambda Function](Assets/lamda-func.png)
 
 4. **Testing:**
    - Test the setup by creating new EBS volumes in your AWS environment and verifying if they are automatically converted from `gp2` to `gp3`.
