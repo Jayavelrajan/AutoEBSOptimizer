@@ -6,7 +6,7 @@ This project automates the conversion of newly created Amazon Elastic Block Stor
 
 ## Architecture
 
-![Project Architecture](architecture-diagram.png)
+![Project Architecture](Assets/ebs.gif)
 
 ### Components:
 
