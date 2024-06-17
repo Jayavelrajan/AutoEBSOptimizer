@@ -53,6 +53,9 @@ This project automates the conversion of newly created Amazon Elastic Block Stor
    - Test the setup by creating new EBS volumes in your AWS environment and verifying if they are automatically converted from `gp2` to `gp3`.
    - Ensure that volumes of type `gp3` are not modified.
 
+     
+     ![Testing gp2 to gp3](Assets/gp2togp3.gif)
+
 ## Usage
 
 Once deployed, the system will automatically convert any newly created EBS volumes from `gp2` to `gp3` type. Monitor CloudWatch Logs for Lambda function executions and API responses for auditing and troubleshooting.
